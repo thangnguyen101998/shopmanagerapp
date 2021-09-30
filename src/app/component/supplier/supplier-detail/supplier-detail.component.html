@@ -1,0 +1,86 @@
+<div class="row px-4">
+  <h4 class="px-4 py-3 border-bottom border-secondary col-12">
+    Quản lý nhà cung cấp
+  </h4>
+</div>
+<div [style]="{ marginLeft: '20px' }" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="addProductCategoryModalLabel">
+        Chỉnh sửa nhà cung cấp
+      </h5>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="formEditSupplier">
+        <div class="form-group">
+          <input type="hidden" formControlName="id" />
+        </div>
+        <div class="form-group">
+          <label for="name"
+            >Tên công ty<span class="text text-danger">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="supplierName"
+            placeholder="Nhập tên công ty"
+            tabindex="1"
+            autofocus="autofocus"
+            readonly
+          />
+        </div>
+        <div class="form-group">
+          <label for="description"
+            >Email<span class="text text-danger">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="email"
+            placeholder="Nhập email nhà cung cấp"
+            tabindex="2"
+            readonly
+          />
+        </div>
+        <div class="form-group">
+          <label for="description"
+            >Địa chỉ<span class="text text-danger">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="address"
+            placeholder="Nhập địa chỉ nhà cung cấp"
+            tabindex="2"
+            readonly
+          />
+        </div>
+        <div class="form-group">
+          <label for="description"
+            >Số điện thoại<span class="text text-danger">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="phoneNumber"
+            placeholder="Nhập số điện thoại nhà cung cấp"
+            tabindex="2"
+            readonly
+          />
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button
+            type="button"
+            id="add-employee-form"
+            class="btn btn-secondary"
+            data-dismiss="modal"
+            tabindex="4"
+            (click)="redirectList()"
+          >
+            Quay trở về
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
